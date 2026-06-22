@@ -1,10 +1,9 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vietnam Scenic Destinations</title>
+<title>Vietnam Explorer</title>
 
 <style>
 *{
@@ -19,6 +18,7 @@ body{
     color:#333;
 }
 
+/* NAV */
 nav{
     background:white;
     padding:20px 8%;
@@ -28,13 +28,12 @@ nav{
     box-shadow:0 2px 10px rgba(0,0,0,.1);
     position:sticky;
     top:0;
-    z-index:1000;
 }
 
 .logo{
-    font-size:28px;
+    font-size:26px;
     font-weight:bold;
-    color:#0088cc;
+    color:#0077aa;
 }
 
 nav ul{
@@ -50,15 +49,16 @@ nav a{
 }
 
 nav a:hover{
-    color:#0088cc;
+    color:#0077aa;
 }
 
+/* HERO */
 .hero{
     height:100vh;
-    background:url('1.jpg') center center/cover no-repeat;
+    background:url('1.jpg') center/cover no-repeat;
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
     text-align:center;
     position:relative;
 }
@@ -67,48 +67,49 @@ nav a:hover{
     content:"";
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,.45);
+    background:rgba(0,0,0,0.45);
 }
 
 .hero-content{
     position:relative;
-    z-index:2;
     color:white;
-    padding:20px;
+    z-index:2;
 }
 
-.hero-content h1{
-    font-size:64px;
-    margin-bottom:20px;
+.hero h1{
+    font-size:60px;
 }
 
-.hero-content p{
-    font-size:22px;
+.hero p{
+    font-size:20px;
+    margin-top:10px;
 }
 
+/* SECTIONS */
 section{
     padding:80px 10%;
 }
 
-.section-title{
+.title{
     text-align:center;
+    font-size:36px;
     margin-bottom:50px;
-    color:#0088cc;
-    font-size:38px;
+    color:#0077aa;
 }
 
-.gallery{
+/* CARDS */
+.grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:30px;
 }
 
 .card{
     background:white;
-    border-radius:20px;
+    border-radius:18px;
     overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,.12);
-    transition:.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    transition:0.3s;
 }
 
 .card:hover{
@@ -117,64 +118,46 @@ section{
 
 .card img{
     width:100%;
-    height:280px;
+    height:260px;
     object-fit:cover;
-    display:block;
 }
 
 .card-content{
-    padding:25px;
+    padding:20px;
 }
 
 .card-content h3{
-    color:#0088cc;
-    margin-bottom:15px;
+    color:#0077aa;
+    margin-bottom:10px;
 }
 
 .card-content p{
-    line-height:1.7;
+    line-height:1.6;
 }
 
+/* FACTS */
 .facts{
     background:white;
-    border-radius:20px;
     padding:40px;
-    box-shadow:0 10px 25px rgba(0,0,0,.1);
-}
-
-.facts ul{
-    padding-left:20px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 .facts li{
-    margin-bottom:15px;
+    margin-bottom:12px;
 }
 
+/* FOOTER */
 footer{
     background:#1d1d1d;
     color:white;
     text-align:center;
-    padding:30px;
+    padding:25px;
 }
 
 @media(max-width:768px){
-
-.hero-content h1{
-    font-size:40px;
-}
-
-.hero-content p{
-    font-size:18px;
-}
-
-nav{
-    flex-direction:column;
-    gap:15px;
-}
-
-nav ul{
-    flex-wrap:wrap;
-    justify-content:center;
+.hero h1{
+    font-size:38px;
 }
 }
 </style>
@@ -184,77 +167,77 @@ nav ul{
 
 <nav>
 <div class="logo">Vietnam Explorer</div>
-
 <ul>
 <li><a href="#home">Home</a></li>
-<li><a href="#destinations">Destinations</a></li>
+<li><a href="#places">Places</a></li>
 <li><a href="#facts">Facts</a></li>
 </ul>
 </nav>
 
+<!-- HERO -->
 <section class="hero" id="home">
 <div class="hero-content">
-<h1>Discover Vietnam</h1>
-<p>Beautiful landscapes, mountains, beaches, and world-famous landmarks.</p>
+<h1>Explore Vietnam</h1>
+<p>Mountains, cities, lakes and world-famous landscapes</p>
 </div>
 </section>
 
-<section id="destinations">
+<!-- PLACES -->
+<section id="places">
 
-<h2 class="section-title">Featured Destinations</h2>
+<h2 class="title">Famous Places</h2>
 
-<div class="gallery">
+<div class="grid">
 
+<!-- 1 -->
 <div class="card">
 <img src="1.jpg" alt="Golden Bridge">
-
 <div class="card-content">
 <h3>Golden Bridge – Da Nang</h3>
-<p>
-One of Vietnam's most iconic attractions, located in Ba Na Hills.
-The bridge is famous for its giant stone hands appearing to lift
-the walkway above the mountains.
-</p>
+<p>Famous bridge held by giant stone hands in Ba Na Hills.</p>
 </div>
 </div>
 
+<!-- 2 -->
 <div class="card">
 <img src="2.jpg" alt="Ha Long Bay">
-
 <div class="card-content">
 <h3>Ha Long Bay</h3>
-<p>
-A UNESCO World Heritage Site known for emerald waters,
-towering limestone islands, and traditional floating villages.
-</p>
+<p>UNESCO site with limestone islands and emerald waters.</p>
+</div>
+</div>
+
+<!-- 3 -->
+<div class="card">
+<img src="3.jpg" alt="Hoan Kiem Lake">
+<div class="card-content">
+<h3>Hoàn Kiếm Lake – Hanoi</h3>
+<p>Historic lake in the heart of Hanoi with Turtle Tower.</p>
 </div>
 </div>
 
 </div>
-
 </section>
 
+<!-- FACTS -->
 <section id="facts">
 
-<h2 class="section-title">Quick Facts</h2>
+<h2 class="title">Quick Facts</h2>
 
 <div class="facts">
 <ul>
 <li>🌉 Golden Bridge is located in Ba Na Hills, Da Nang.</li>
-<li>🏔 Ba Na Hills sits high in the mountains with stunning panoramic views.</li>
-<li>🚤 Ha Long Bay contains thousands of limestone islands and islets.</li>
-<li>🌏 Both destinations are among Vietnam's most visited tourist attractions.</li>
-<li>📸 They are popular locations for photography and sightseeing.</li>
+<li>🏝 Ha Long Bay has thousands of limestone islands.</li>
+<li>🏞 Hoàn Kiếm Lake is a cultural symbol of Hanoi.</li>
+<li>📸 All three are top tourist destinations in Vietnam.</li>
 </ul>
 </div>
 
 </section>
 
 <footer>
-<p>© 2026 Vietnam Explorer • Travel & Discover</p>
+<p>© 2026 Vietnam Explorer</p>
 </footer>
 
 </body>
 </html>
-```
-
